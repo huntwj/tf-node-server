@@ -18,5 +18,9 @@
     "@types/node": "^9.4.6",
     "ts-node": "^5.0.1",
     "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "@types/node-ipc": "^9.1.0",
+    "node-ipc": "^9.1.1"
   }
 }
