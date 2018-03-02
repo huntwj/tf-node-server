@@ -21,11 +21,18 @@ export class Server {
       ipc.server.stop();
       return;
     }
-    const arrayStr = message
-        .map((str) => `'${str}'`)
-        .join(', ');
 
-    Server.log(`[${arrayStr}]`);
+    if (message && message.length > 0) {
+      if (message[0] === 'echo') {
+        message.shift();
+
+        const arrayStr = message
+          .map((str) => `'${str}'`)
+          .join(', ');
+
+        Server.log(`[${arrayStr}]`);
+      }
+    }
   }
 
   private static log = (message: string) => {
