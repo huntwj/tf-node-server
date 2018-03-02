@@ -11,3 +11,9 @@
 
 /def node_sendMessage = \
     /quote -0 -decho !"cd %{TF_NODE_SERVER_DIR} && %{TF_NODE_CMD} %{*}"
+
+/def quit = \
+    /node_sendMessage quit%;\
+    /@quit
+
+/node_startServer
